@@ -3,6 +3,8 @@ const cardValue =  ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
 const cardSuit = ["Hearts", "Spades", "Clubs", "Diamonds"];
 
 describe("randomiser", function(){
+
+    // test one
     it("should return a number", function(){
         // arrange
         let indexnum = 2;
@@ -12,6 +14,7 @@ describe("randomiser", function(){
         expect(result).toBe(2);
     });
 
+    //test two
     it("should return true", function(){
         // arrange
         let i = Math.floor(Math.random(1,9));
@@ -22,6 +25,7 @@ describe("randomiser", function(){
         expect(result).toBe(true);
     });
 
+    //test three
     it("should return 3", function(){
         // arrange
         let cardname = cardValue[2];
@@ -32,6 +36,7 @@ describe("randomiser", function(){
         expect(result).toBe("3");
     });
 
+    //test four
     it("should return true", function(){
         // arrange
         let i = Math.floor(Math.random(0,12));
@@ -43,6 +48,7 @@ describe("randomiser", function(){
         expect(result).toBe(true);
     });
 
+    //test five
     it("should return Hearts", function(){
         // arrange
         let cardname = cardSuit[0];
@@ -53,6 +59,7 @@ describe("randomiser", function(){
         expect(result).toBe("Hearts");
     });
 
+    //test six
     it("should return true", function(){
         // arrange
         let i = Math.floor(Math.random(0,3));
@@ -64,6 +71,7 @@ describe("randomiser", function(){
         expect(result).toBe(true);
     });
 
+    //test seven
     it("should return AofHearts ", function(){
         // arrange
         let cardType = cardSuit[0];
@@ -75,6 +83,7 @@ describe("randomiser", function(){
         expect(result).toBe("AofHearts");
     });
 
+    //test eight
     it("should return true", function(){
         // arrange
         let i = Math.floor(Math.random(0,3));
