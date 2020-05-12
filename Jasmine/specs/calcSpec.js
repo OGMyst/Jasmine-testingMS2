@@ -1,45 +1,35 @@
-const cardSelect =  [{"hearts":["A","2","3","4","5","6","7","8","9","10","J","Q","K"]},
-                {"spades":["A","2","3","4","5","6","7","8","9","10","J","Q","K"]},
-                {"clubs":["A","2","3","4","5","6","7","8","9","10","J","Q","K"]},
-                {"diamonds":["A","2","3","4","5","6","7","8","9","10","J","Q","K"]}
-                ];
+const cardValue =  ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+
+const cardSuit = ["Hearts", "Spades", "Clubs", "Diamonds"];
 
 describe("randomiser", function(){
     it("should return a number", function(){
         // arrange
         let indexnum = 2;
-
         // act
         const result = cards(indexnum);
-
         //assert
         expect(result).toBe(2);
     });
 
     it("should return true", function(){
-
         // arrange
-        let random = Math.floor(Math.random());
-        let indexnum = isFinite(random)
-
+        let i = Math.floor(Math.random(1,9));
+        let indexnum = isFinite(i)
         // act
         const result = cards(indexnum);
-
         //assert
         expect(result).toBe(true);
     });
 
     it("should return true", function(){
-
         // arrange
-        let i = Math.floor(Math.random(0,3));
-        let cardname = cards[i];
-        let indexnum = isNaN(cardname);
-
+        let cardname = cardValue[2];
+        let indexnum = cardname;
         // act
         const result = cards(indexnum);
-
         //assert
-        expect(result).toBe(true);
+        expect(result).toBe("3");
     });
+
 });
